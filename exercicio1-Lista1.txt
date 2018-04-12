@@ -1,0 +1,106 @@
+Exercício 1:
+
+a) mod 17 3
+
+	Exibe o resto da operação de divisão entre 17 e 3, nesse caso, o resultado
+	gerado foi 2
+
+b) mod 15 2 == 0
+
+	Faz a operação de divisão entre 15 e 2 e compara se o resto de tal operação
+	equivale a 0. Como o resto entre 15 e 2 não é zero, o haskell retorna um valor booleano falso para a operação
+
+c) div 15 2 + mod 15 2 * 7
+	
+	Faz uma operação de resto entre 15 e 2, multiplica o resto obtido por 7 e soma o valor resultante
+	com o quociente de 15 por 2. Nesse caso, o resultado foi 14.
+
+	Passo a passo: mod 15 2 = 1.
+			1 * 7 = 7
+			div 15 2 = 7
+			7 + 7 = 14
+			div 15 2 + mod 15 2 * 7 = 14;
+
+d) abs 2
+
+	Exibe o valor absoluto do número, ou seja, seu módulo. Como 2 é positivo,
+	o ghci simplesmente o exibe.
+
+e) 15 / 2 * 3^2.4 + abs (-4)
+
+	Foi exibido um erro. Erro esse ocorrido devido ao uso do 3^2.4. Quando
+	é utilizada uma operação a^b, lê-se a elevado a b. Porém, nesse caso o
+	resultado exibido foi um erro pois o expoente não era um número inteiro.
+
+f) sqrt ( 5 * 5 - 4 * 3 * 6) / (2 * 3)
+
+	O resultado exibido foi 'NaN'. Esse resultado foi exibido pois a operação
+	dentro do parênteses não está definida no domínio da função de raiz quadrada.
+	Uma vez que sqrt calcula a raiz quadrada, e a operação acima tenta calcular
+	uma raiz quadrada de um número negativo.
+
+g) pi * 3.5 * 3.5
+
+	Foi exibido o resultado 38.48451000647496. A operação acima é uma
+	simples multiplicação entre três números reais. pi (3.14), número
+	irracional, multiplicado por 3.5 duas vezes.
+
+h) pi * 3.5^2
+	A mesma operação do item g, a diferença é que nesse item foi posto
+	o 3.5^2, que é exatamente a mesma coisa que 3.5*3.5. Já que 3.5^2 
+	lê-se 3.5 elevado a dois, o que é a mesma coisa que multiplicá-lo por 
+	ele mesmo.
+
+i) sin 3*pi/2
+	Exibe o seno de 3pi/2.
+
+j) signum abs (-4)
+	Foi exibido um erro. A operação deveria ser escrita como:
+	signum (abs(-4))
+	Sendo assim, o resultado seria 1, pois a função signum retorna 1 quando
+	o valor do número em questão é positivo, 0 quando for 0 e -1 quando for
+	negativo
+
+k) div 4 2 + 3 * 5/7
+	Um erro foi exibido por causa da divisão fracional de 5/7
+
+l) sqrt 3*4
+
+	Calcula o quadrado de 3 e multiplica por 4
+
+m) sqrt (3*4)
+
+	Calcula o quadrado de 12
+
+n) signum (2^3 -10 +40)
+	
+	Exibe o sinal da expressão, como explicitado no item j.
+
+o) -7 +2
+	
+	Exibe o resultado da expressão 2 - 7
+
+p) 5 + 4 + 6 + 8 + 20.4
+
+	Exibe o resultado da soma entre os números.
+
+q) div 5 2 +3
+
+	Soma o quociente da divisão de 5 por 2 e soma com 3
+
+r)  mod 18 5 + 3.5
+
+	Não pode haver um valor fracionário na mesma linha do mod
+
+s) sqrt abs -4
+
+	Erro, deveria haver um parênteses no -4.
+
+t) 24/4
+
+	Retorna o valor real de 24 dividido por 4
+
+u) div 24 4
+
+	Retorna o valor inteiro de 24 dividido por 4
+

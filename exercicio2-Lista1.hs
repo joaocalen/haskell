@@ -1,0 +1,1 @@
+numCedulas valor = div valor 500 + div (mod valor 500) 100 + div (mod valor 100) 50 + div (mod valor 50) 10 + div (mod valor 10) 5 + mod valor 5  

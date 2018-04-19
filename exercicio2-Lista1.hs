@@ -12,4 +12,18 @@ raizN a b c = (-b - sqrt(b^2 -4*a*c))/2*a
 
 raizes a b c = (raizP a b c, raizN a b c)
 
+potenciaN a b = 1 / (a ^ (-b))
+
+potencia a b = 
+		 if (b > 0) then
+		   a ^ b
+		 else
+		 		 if((b==0) && (not(a==0))) then
+		   		1
+		 			else
+					 	 if (b < 0) then
+		   				1/(a ^ (-b))
+		 				 else
+		   				"Potencia nao pode ser realizada" 
+
 

@@ -38,3 +38,28 @@ potencia :: Float -> Integer -> Float
 
 celsiusToFarenheit c = (c*1.8) + 32
 
+lucroAnual v = (v * 1.005^12)
+
+areaCinza r = (areaCirculo (3*r/2)) - (areaCirculo r)
+
+verificarQuadrante x y = 
+	if ((x >= 0) && (y >= 0)) then
+		"Primeiro Quadrante"
+	else
+		if ((x < 0) && (y >= 0)) then
+			"Segundo quadrante"
+		else
+			if ((x < 0) && (y < 0)) then
+				"Terceiro Quadrante"
+			else
+				"Quarto quadrante"
+
+verificarIntervalo x a b = 
+	if(a > b) then
+		verificarIntervalo x b a 
+	else
+		if((x >= a) && (x <= b)) then
+			"Pertence ao intervalo"
+		else
+			"Nao pertence ao intervalo"
+		

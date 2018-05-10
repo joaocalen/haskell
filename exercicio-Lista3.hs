@@ -17,7 +17,7 @@ determinarTriangulo (ax,ay) (bx,by) (cx,cy) =
                 "Isoceles"
         else
             if(distancia (ax,ay) (bx,by) == distancia (bx,by) (cx,cy)) then
-                "rola"
+                "Isoceles"
             else
                 "Escaleno"
     

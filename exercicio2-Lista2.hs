@@ -26,4 +26,47 @@ distancia2pontos ax ay bx by = sqrt((ax - bx)^2 + (ay - by)^2)
 
 pertinenciaCircunferencia x y cx cy r =  distancia2pontos x y cx cy <= r
 
+lucroCerto e f = 
+    if (pontos > 20) then
+        if (pontos > 30) then
+            if (pontos > 40) then
+                500
+            else
+                400
+        else
+            300
+    else
+        if (pontos > 10) then
+            200
+        else
+            if (pontos > 1) then
+                100
+            else
+                0
+    where
+    pontos = e - (2/3)*f
+
+movimentarXadrez n c1 c2 =
+    if (pertTab) then 
+        show ("A peca " ++ retornaString(moveUp) ++ " cima, " ++ retornaString(moveDown) ++ " baixo, " ++
+         retornaString(moveRight) ++ " direita, " ++ retornaString(moveLeft) ++ " esquerda, " ++ retornaString(moveDiagUR) ++ " diagonal superior direta, "
+         ++ retornaString(moveDiagUL) ++ " diagonal superior esquerda, " ++ retornaString(moveDiagDL) ++ " diagonal inferior esquerda e "
+         ++ retornaString(moveDiagDR) ++ " diagonal inferior direita")
+    else
+        "Escreve as coordenadas direito seu animal"
+    where
+    pertTab = (signum c1 == signum c2) && not(signum c1 == -1) && (c1 <= n) && (c2 <= n)
+    moveUp = (c2 + 1 <= n)
+    moveDown = (c2 - 1 >= 0)
+    moveRight = (c1 + 1 <= n) 
+    moveLeft = (c1 - 1 >= 0)
+    moveDiagUR = moveUp && moveRight
+    moveDiagUL = moveUp && moveLeft
+    moveDiagDL = moveDown && moveLeft
+    moveDiagDR = moveDown && moveRight
+    retornaString a =
+        if (a) then
+            "pode se movimentar para"
+        else
+            "nao pode se movimentar para"
 

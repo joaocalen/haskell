@@ -70,3 +70,6 @@ movimentarXadrez n c1 c2 =
         else
             "nao pode se movimentar para"
 
+precoFinal idade preco | idade >= 60 = preco * 0.6
+                       | idade >= 2 && idade <= 10 = preco * 0.5
+                       | otherwise  = preco * 0.1
